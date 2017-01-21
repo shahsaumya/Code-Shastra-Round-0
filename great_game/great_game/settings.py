@@ -38,7 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hunt_app',
-    #'rest_framework',
+    'rest_framework',
    # 'geoposition',
 )
 
