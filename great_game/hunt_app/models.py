@@ -2,12 +2,12 @@ from django.db import models
 
 class Team(models.Model):
 	team_name = models.CharField(max_length = 20)
-	#team_id = models.PositiveIntegerField()
+	team_id = models.PositiveIntegerField(null = True)
 	team_member_1 = models.CharField(max_length = 20)
 	team_member_2 = models.CharField(max_length = 20)
 	team_member_3 = models.CharField(max_length = 20, null = True, blank = True)
 	team_member_4 = models.CharField(max_length = 20, null = True, blank = True)
-	team_photo = models.ImageField(upload_to='team_pics/', null = True, blank = True)
+	team_photo = models.ImageField(upload_to='media/', null = True, blank = True)
 	team_score = models.PositiveIntegerField(default=0)
 	team_status=models.BooleanField(default=True)
 	tasks_completed = models.PositiveIntegerField(default=0)
