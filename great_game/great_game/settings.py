@@ -38,8 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hunt_app',
-    #'rest_framework',
-   # 'geoposition',
+    'rest_framework',
+   'geoposition',
 )
 
 MIDDLEWARE_CLASSES = (
