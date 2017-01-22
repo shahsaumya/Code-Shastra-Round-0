@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^panel/', views.panel),
     url(r'^team-json/', views.TeamList.as_view()),
     url(r'^task-json/', views.TaskList.as_view()),
+    url(r'^timer/', views.CountdownTimer),
 
 ]
 
