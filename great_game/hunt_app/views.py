@@ -70,6 +70,9 @@ def index(request):
 def CountdownTimer(request):
 	return render(request, 'CountdownTimer.html')
 
+def table(request):
+	return render(request, 'responsive_table.html')
+
 def panel(request):    
     full=Team.objects.all()        
     return render(request, 'panels.html',
