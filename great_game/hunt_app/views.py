@@ -68,6 +68,14 @@ class TeamList(APIView):
 def index(request):
     return render(request,'index.html')   
 
+def CountdownTimer(request):
+	return render(request, 'CountdownTimer.html')
+
+def table(request):
+	return render(request, 'responsive_table.html')
+
+def chart(request):
+	return render(request, 'chartjs.html')
 
 def panel(request):    
     full=Team.objects.all()        
