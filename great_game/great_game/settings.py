@@ -39,7 +39,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'hunt_app',
     'rest_framework',
-   # 'geoposition',
+
+
 )
 
 MIDDLEWARE_CLASSES = (

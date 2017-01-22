@@ -13,8 +13,10 @@ class Team(models.Model):
 	tasks_completed = models.PositiveIntegerField(default=0)
 	team_rank = models.PositiveIntegerField(null = True, blank = True)
 	team_hint_count=models.PositiveIntegerField(default=0)
+	team_lat=models.FloatField(null = True, blank = True)
+	team_long=models.FloatField(null = True, blank = True)
 
-	#team_location =
+	
 
 	def __str__(self):
 		return self.team_name
