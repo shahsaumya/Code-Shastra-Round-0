@@ -14,6 +14,7 @@ from rest_framework import status
 from hunt_app.models import Team, Task
 from hunt_app.serializers import TeamSerializer, TaskSerializer
 from django.http import Http404
+from django.core import serializers
 
 class TaskList(APIView):
 
@@ -80,6 +81,11 @@ def panel(request):
     full=Team.objects.all()        
     return render(request, 'panels.html',
               {'full':full})
+
+
+
+
+
 
 
 
