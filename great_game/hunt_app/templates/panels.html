@@ -300,8 +300,9 @@
 
             {% if full %}
             {% for team in full %}
+        
 						<div class="col-lg-4 col-md-4 col-sm-4 mb">
-							<div class="weather-2 pn">
+						<div class="weather-2 pn">
 								<div class="weather-2-header">
 									<div class="row">
 										<div class="col-sm-6 col-xs-6">
@@ -312,12 +313,16 @@
 										</div>
 									</div>
 								</div><!-- /weather-2 header -->
-								<div class="row centered">
-									<img src="media/{{place.team_photo}}" class="img-circle" width="120">			
+                <br>
+                <br>
+							<div class="row centered">
+									<img src= "{% static 'img/download.jpeg' %}" class="img-circle" width="120">			
 								</div>
-								
-							</div>
+
+
+						</div>
 						</div><! --/col-md-4 -->
+  
             {% endfor %}
 
 

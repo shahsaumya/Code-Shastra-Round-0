@@ -7,7 +7,7 @@ class Team(models.Model):
 	team_member_2 = models.CharField(max_length = 20)
 	team_member_3 = models.CharField(max_length = 20, null = True, blank = True)
 	team_member_4 = models.CharField(max_length = 20, null = True, blank = True)
-	team_photo = models.ImageField(upload_to='media/', null = True, blank = True)
+	#team_photo = models.ImageField(upload_to='media/', null = True, blank = True)
 	team_score = models.PositiveIntegerField(default=0)
 	team_status=models.BooleanField(default=True)
 	tasks_completed = models.PositiveIntegerField(default=0)

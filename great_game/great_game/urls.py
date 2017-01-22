@@ -19,6 +19,10 @@ urlpatterns = [
     url(r'^table/', views.table),
     url(r'^chart/', views.chart),
 
+
+
+
+
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
