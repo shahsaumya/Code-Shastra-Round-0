@@ -73,6 +73,9 @@ def CountdownTimer(request):
 def table(request):
 	return render(request, 'responsive_table.html')
 
+def chart(request):
+	return render(request, 'chartjs.html')
+
 def panel(request):    
     full=Team.objects.all()        
     return render(request, 'panels.html',
