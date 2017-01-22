@@ -40,10 +40,8 @@ INSTALLED_APPS = (
     'hunt_app',
     'rest_framework',
 
-   #'geoposition',
 
-   # 'geoposition',
-
+)
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

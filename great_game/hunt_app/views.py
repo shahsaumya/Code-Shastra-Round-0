@@ -36,14 +36,21 @@ class TaskList(APIView):
 
 class TeamList(APIView):
 
+	def get_object(self, pk):
+		try:
+			return Snippet.objects.get(pk=pk)
+		except Snippet.DoesNotExist:
+			raise Http404
+
+
 	def get(self, request):
 		teams = Team.objects.all()
 		team_serializer = TeamSerializer(teams, many = True)
 		return Response(team_serializer.data)
 
-	def put(self, request, team_location, format=None):
+	def put(self, request, pk, format=None):
 		snippet = self.get_object(pk)
-		serializer = SnippetSerializer(snippet, data=request.data)
+		serializer = TeamSerializer(snippet, data=request.data)
 		if serializer.is_valid():
 			serializer.save()
 			return Response(serializer.data)
