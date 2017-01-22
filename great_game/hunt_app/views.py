@@ -75,13 +75,13 @@ def table(request):
 	return render(request, 'responsive_table.html')
 
 def chart(request):
-	zero=Team.objects.filter(tasks_completed__contains=0)
-	one=Team.objects.filter(tasks_completed__contains=1)
-	two=Team.objects.filter(tasks_completed__contains=2)
-	three=Team.objects.filter(tasks_completed__contains=3)
-	four=Team.objects.filter(tasks_completed__contains=4)
-	five=Team.objects.filter(tasks_completed__contains=4)
-	return render(request, 'chartjs.html', {'zero':zero.length,'one':one.length,'two':two.length,'three':three.length,'four':four.length,'five':five.length,})
+	#zero=Team.objects.filter(tasks_completed__contains=0)
+	#one=Team.objects.filter(tasks_completed__contains=1)
+	#two=Team.objects.filter(tasks_completed__contains=2)
+	#three=Team.objects.filter(tasks_completed__contains=3)
+	#four=Team.objects.filter(tasks_completed__contains=4)
+	#five=Team.objects.filter(tasks_completed__contains=4)
+	return render(request, 'chartjs.html')
 
 def panel(request):    
     full=Team.objects.all()        
