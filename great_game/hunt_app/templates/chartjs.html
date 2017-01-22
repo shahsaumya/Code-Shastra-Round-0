@@ -18,7 +18,13 @@
     <!-- Custom styles for this template -->
     <link href="{% static '/css/style.css' %}" rel="stylesheet">
     <link href="{% static '/css/style-responsive.css' %}" rel="stylesheet">
-    
+    <style>
+       #map {
+        padding: 30px;
+        height: 250px;
+        width: 100%;
+       }
+    </style>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -239,64 +245,46 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
-          <h3><i class="fa fa-angle-right"></i> Chartjs Charts</h3>
+          <h3><i class="fa fa-angle-right"></i> Treasure Hunt </h3>
               <!-- page start-->
+            
               <div class="tab-pane" id="chartjs">
                   <div class="row mt">
                       <div class="col-lg-6">
-                          <div class="content-panel">
-							  <h4><i class="fa fa-angle-right"></i> Doughnut</h4>
-                              <div class="panel-body text-center">
-                                  <canvas id="doughnut" height="300" width="400"></canvas>
-                              </div>
+                          <div class="content-panel" style = "padding: 30px;">
+							  <h4><i class="fa fa-angle-right"></i> Team Location</h4>
+                <p id = "#latt">{{team1.team_lat  }}</p>
+               <p id = "#longg">{{ team1.team_long }}</p>
+                 <div id="map"></div>
+                            
                           </div>
                       </div>
-                      <div class="col-lg-6">
-                          <div class="content-panel">
-							  <h4><i class="fa fa-angle-right"></i> Line</h4>
-                              <div class="panel-body text-center">
-                                  <canvas id="line" height="300" width="400"></canvas>
-                              </div>
-                          </div>
-                      </div>
+                     
+                    
                   </div>
-                  <div class="row mt">
-                      <div class="col-lg-6">
-                          <div class="content-panel">
-							  <h4><i class="fa fa-angle-right"></i> Radar</h4>
-                              <div class="panel-body text-center">
-                                  <canvas id="radar" height="300" width="400"></canvas>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-lg-6">
-                          <div class="content-panel">
-							  <h4><i class="fa fa-angle-right"></i> Polar Area</h4>
-                              <div class="panel-body text-center">
-                                  <canvas id="polarArea" height="300" width="400"></canvas>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row mt">
-                      <div class="col-lg-6">
-                          <div class="content-panel">
-							  <h4><i class="fa fa-angle-right"></i> Bar</h4>
-                              <div class="panel-body text-center">
-                                  <canvas id="bar" height="300" width="400"></canvas>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-lg-6">
-                          <div class="content-panel">
-							  <h4><i class="fa fa-angle-right"></i> Pie</h4>
-                              <div class="panel-body text-center">
-                                  <canvas id="pie" height="300" width="400"></canvas>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+                 
               </div>
+            
+             <script>
+      function initMap() {
+        var latt = Number(document.getElementById('latt'));
+        var longg = Number(document.getElementById('longg'));
+        var uluru = {lat: 19.1154, lng: 72.9091};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+   
+
+             <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvCg-Ed0uayEUcNWIgVb_6pRV8imB5kEM&callback=initMap">
+    </script>
               <!-- page end-->
           </section>          
       </section><!-- /MAIN CONTENT -->

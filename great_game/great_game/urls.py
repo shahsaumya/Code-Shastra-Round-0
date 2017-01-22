@@ -17,7 +17,7 @@ urlpatterns = [
     url(r'^task-json/', views.TaskList.as_view()),
     url(r'^timer/', views.CountdownTimer),
     url(r'^table/', views.table),
-    url(r'^chart/', views.chart),
+    url(r'^chart/', views.map),
 
 
 

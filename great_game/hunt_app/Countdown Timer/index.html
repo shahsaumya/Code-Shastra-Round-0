@@ -98,7 +98,7 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+var deadline = new Date(Date.parse(new Date()) + 30 * 60 * 1000);
 initializeClock('clockdiv', deadline);
 
 
@@ -111,10 +111,6 @@ initializeClock('clockdiv', deadline);
 <body>
   <h1>Countdown Clock</h1>
 <div id="clockdiv">
-  <div>
-    <span class="days"></span>
-    <div class="smalltext">Days</div>
-  </div>
   <div>
     <span class="hours"></span>
     <div class="smalltext">Hours</div>

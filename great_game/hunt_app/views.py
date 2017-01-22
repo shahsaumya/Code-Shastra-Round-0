@@ -100,6 +100,14 @@ def table(request):
            
 
 #	return render(request, 'blank.html', {'team':team})    
+def map(request):
+	team1=Team.objects.get(team_id=1)
+	team2=Team.objects.get(team_id=2)
+	team3=Team.objects.get(team_id=3)
+
+	return render(request, 'chartjs.html',{'team1':team1,'team2':team2,'team3':team3})
+
+
 
 
 

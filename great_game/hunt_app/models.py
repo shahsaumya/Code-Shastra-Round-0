@@ -26,9 +26,10 @@ class Task(models.Model):
 	task_description = models.CharField(max_length = 50)
 	task_picture = models.ImageField(upload_to ='task_pics/', null = True, blank = True)
 	task_hint = models.CharField(max_length = 10)
-	task_time = models.DurationField()
+	task_time = models.PositiveIntegerField(null = True, blank = True)
 	task_score = models.PositiveIntegerField()
 	task_nextid = models.PositiveIntegerField()
+
 
 	def __str__(self):
 		return self.task_name
